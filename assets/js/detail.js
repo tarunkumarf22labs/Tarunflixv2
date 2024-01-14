@@ -66,6 +66,7 @@ fetchDataFromServer(
       overview,
       casts: { cast, crew },
       videos: { results: videos },
+      imdb_id,
     } = movie;
 
     document.title = `${title} - Tvflix`;
@@ -115,6 +116,10 @@ fetchDataFromServer(
                     </div>
 
                     <p class="genre">${getGenres(genres)}</p>
+
+                    <a class="genre" target="_blank" style="
+                    color: red;
+                " href=https://vidsrc.to/embed/movie/${imdb_id} >Watch now</a> 
 
                     <p class="overview">${overview}</p>
 
